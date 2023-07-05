@@ -1,9 +1,15 @@
-#1a Input a integer number and sum of digits
-n=int(input("Nhap coi: "))
-while (n <= 0):
+# Input a integer number
+def input_number_int():
+    n=int(input("Nhap coi: "))
+    while (n <= 0):
         n=int(input("Nhap lai coi: "))
-print(n)
+    return n
+
+#1a Sum of digits
+
 #mylist = []
+n = int(input_number_int())
+m = n
 sum = 0
 while True:
     sum += int(n % 10)
@@ -14,3 +20,15 @@ while True:
 """for i in range(len(mylist)):
     sum+=mylist[i]"""
 print(sum)
+
+#1b Product of even digits
+
+mul = 1
+while True:
+    temp = m % 10
+    if(temp % 2 == 0):
+        mul *= temp
+    m = int (m / 10)
+    if(m < 1):
+        break
+print(mul)
