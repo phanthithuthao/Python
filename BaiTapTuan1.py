@@ -26,7 +26,7 @@ val = n
 mul = 1
 while True:
     temp = val % 10
-    if(temp % 2 == 0):
+    if(temp % 2 == 0 and temp > 0):
         mul *= temp
     val = int (val / 10)
     if(val < 1):
@@ -56,3 +56,15 @@ while True:
     if(val < 1):
         break
 print(max)
+
+#1e Find min number
+val = n
+min = 0
+while True:
+    temp = val % 100
+    if(temp < min):
+        min = temp
+    val = int (val / 10)
+    if(val < 1):
+        break
+print(min)
