@@ -9,12 +9,12 @@ def input_number_int():
 
 #mylist = []
 n = int(input_number_int())
-m = n
+val = n
 sum = 0
 while True:
-    sum += int(n % 10)
-    n = int (n / 10)
-    if(n < 1):
+    sum += int(val % 10)
+    val = int (val / 10)
+    if(val < 1):
         break
 
 """for i in range(len(mylist)):
@@ -22,13 +22,37 @@ while True:
 print(sum)
 
 #1b Product of even digits
-
+val = n
 mul = 1
 while True:
-    temp = m % 10
+    temp = val % 10
     if(temp % 2 == 0):
         mul *= temp
-    m = int (m / 10)
-    if(m < 1):
+    val = int (val / 10)
+    if(val < 1):
         break
 print(mul)
+
+#1c count odd numbers
+val = n
+count = 0
+while True:
+    temp = val % 10
+    if(temp % 2 != 0):
+        count += 1
+    val = int (val / 10)
+    if(val < 1):
+        break
+print(count)
+
+#1d Find max number
+val = n
+max = -1
+while True:
+    temp = val % 10
+    if(temp > max):
+        max = temp
+    val = int (val / 10)
+    if(val < 1):
+        break
+print(max)
