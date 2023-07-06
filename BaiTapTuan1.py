@@ -68,3 +68,5 @@ while True:
     if(val < 1):
         break
 print(min)
+
+#1f 
