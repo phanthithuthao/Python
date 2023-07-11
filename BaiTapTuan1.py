@@ -83,3 +83,6 @@ if(flag == True):
     print("tang nghiem ngac")
 else:
     print("khong tang nghiem ngac")
+
+#2 Draw square
+n = eval(input("Nhap so canh: "))
