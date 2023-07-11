@@ -12,8 +12,8 @@ n = int(input_number_int())
 val = n
 sum = 0
 while True:
-    sum += int(val % 10)
-    val = int (val / 10)
+    sum += val % 10
+    val = val // 10
     if(val < 1):
         break
 
@@ -28,7 +28,7 @@ while True:
     temp = val % 10
     if(temp % 2 == 0 and temp > 0):
         mul *= temp
-    val = int (val / 10)
+    val = val // 10
     if(val < 1):
         break
 print(mul)
@@ -40,7 +40,7 @@ while True:
     temp = val % 10
     if(temp % 2 != 0):
         count += 1
-    val = int (val / 10)
+    val = val // 10
     if(val < 1):
         break
 print(count)
@@ -52,21 +52,34 @@ while True:
     temp = val % 10
     if(temp > max):
         max = temp
-    val = int (val / 10)
+    val = val // 10
     if(val < 1):
         break
 print(max)
 
 #1e Find min number
 val = n
-min = 0
+min = n % 10
 while True:
     temp = val % 100
     if(temp < min):
         min = temp
-    val = int (val / 10)
+    val = val // 10
     if(val < 1):
         break
 print(min)
 
 #1f 
+prev_digit = n % 10  # Lấy chữ số cuối cùng làm chữ số trước đó
+n = n // 10  # Loại bỏ chữ số cuối cùng
+flag = True
+while n > 0:
+    curr_digit = n % 10  # Lấy chữ số hiện tại
+    if curr_digit >= prev_digit:
+        flag = False
+    prev_digit = curr_digit
+    n = n // 10
+if(flag == True):
+    print("tang nghiem ngac")
+else:
+    print("khong tang nghiem ngac")
