@@ -85,4 +85,4 @@ else:
     print("khong tang nghiem ngac")
 
 #2 Draw square
-n = eval(input("Nhap so canh: "))
+a = eval(input("Nhap so canh: "))
